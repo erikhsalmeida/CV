@@ -1,0 +1,195 @@
+/*
+   TRABALHO FINAL
+*/
+
+/*
+📝 Trabalho Final: Curriculum Vitae
+📂 (Desenvolve) Programação Básica Para Web
+Chegou o momento que todos nós esperávamos! Vamos exercitar todas as habilidades
+adquiridas ao longo deste módulo para implementar nosso próprio Curriculum Vitae! Uma
+página de currículo deve conter informações essenciais que proporcionem uma visão
+completa e clara sobre a formação acadêmica, experiência profissional, habilidades e
+outras informações relevantes sobre o candidato.
+Este trabalho está dividido em duas partes:
+Estrutura, onde você irá estruturar e formatar o conteúdo do seu currículo. Para isso,
+você aplicará tudo que viu no curso relacionado a linguagem HTML. É muito importante
+que você preencha a página com suas próprias informações! A ideia é disponibilizar este
+currículo publicamente como uma página web para que outros possam acessá-las.
+Aparência, onde você irá estilizar a aparência visual de seu currículo para deixá-lo bem
+bonito! Para isso, você irá fazer uso de todos os conceitos CSS que vimos ao longo do
+curso. Novamente, capriche na aparência de seu currículo para causar uma boa
+impressão!
+    */
+
+/* RESET BÁSICO */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIÁVEIS DE CORES (PALETA) */
+
+:root {
+    --cor-principal: #1e3a8a;
+    --cor-secundaria: #f1f5f9;
+    --cor-destaque: #2563eb;
+    --cor-texto: #1f2933;
+    --cor-rodape: #0f172a;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    padding-top: 70px; /* espaço para o menu fixo */
+}
+
+h1, h2, h3 {
+    font-family: "Georgia", serif;
+    color: var(--cor-principal);
+}
+
+/* NAVEGAÇÃO */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--cor-principal);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--cor-destaque);
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* APRESENTAÇÃO (HEADER) */
+
+header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+header img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+#contato {
+    margin-top: 15px;
+}
+
+/* SEÇÕES */
+section {
+    margin-bottom: 50px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--cor-destaque);
+    padding-bottom: 5px;
+}
+
+/* ITENS (Educação, Certificações, Experiência) */
+
+.item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-left: 5px solid var(--cor-destaque);
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* LISTAS */
+ul {
+    padding-left: 20px;
+}
+
+#habilidades ul li {
+    margin-bottom: 8px;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: var(--cor-rodape);
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+}
+
+footer ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+footer ul li {
+    margin: 8px 0;
+}
+
+footer a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+}
+
+/* RESPONSIVIDADE - MOBILE */
+
+@media (max-width: 768px) {
+
+    /* Menu vertical no mobile */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    body {
+        padding-top: 140px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    header img {
+        width: 140px;
+        height: 140px;
+    }
+}
